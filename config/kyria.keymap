@@ -10,8 +10,6 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define LWR   1
-#define RSE   2
 
 / {
   keymap {
@@ -23,22 +21,6 @@
   &kp LSHFT &kp A       &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RSHFT
   &kp LCTRL &kp Z       &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT                      &kp PLUS &kp EQL &kp N &kp M  &kp COMMA &kp DOT &kp SQT &kp RCTRL
                       &kp ESC &kp LALT &kp TAB &kp DEL &kp BSPC        &kp SPACE  &kp PLUS  &kp ENT &kp GRAVE &kp BSLH
-      >;
-    };
-    lower_layer {
-      bindings = <
-&bt BT_CLR  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                                                &kp N6 &kp N7  &kp N8     &kp N9   &kp N0    &bt BT_CLR
-  &kp LSHFT &kp A &kp S &kp D &kp F &kp G                                                &kp LEFT &kp DOWN &kp UP &kp RIGHT  &trans   &trans
-  &kp LCTLR &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT        &kp PLUS &kp EQL &kp N &kp M  &kp COMMA &kp DOT &kp SQT &kp RCTRL
-                   &kp ESC &kp LALT &kp TAB &kp DEL &kp BSPC        &kp PLUS  &kp SPACE  &kp ENT &kp GRAVE &kp BSLH
-      >;
-    };
-    raise_layer {
-      bindings = <
-  &kp FSLH  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                                              &kp CARET &kp AMPS  &kp STAR    &kp LPAR   &kp RPAR    &trans
-  &kp LSHFT &kp LBKT &kp RBKT &kp LBRC &kp RBRC &trans                                                &trans &trans &trans  &trans &trans &trans 
-  &kp LCTLR &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT        &kp PLUS &kp EQL &kp N &kp M  &kp COMMA &kp DOT &kp SQT &kp RCTRL
-                   &kp ESC &kp LALT &kp TAB &kp DEL &kp BSPC        &kp PLUS  &kp SPACE  &kp ENT &kp GRAVE &kp BSLH
       >;
     };
   };
