@@ -20,7 +20,7 @@
   &kp FSLH  &kp Q       &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp MINUS
   &kp LSHFT &kp A       &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RSHFT
   &kp LCTRL &kp Z       &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT                      &kp PLUS &kp EQL &kp N &kp M  &kp COMMA &kp DOT &kp SQT &kp RCTRL
-                      &kp ESC &kp LALT &kp TAB &kp DEL &kp BSPC        &kp SPACE  &kp PLUS  &kp ENT &kp GRAVE &kp BSLH
+                      &kp ESC &kp LALT &kp TAB &kp DEL &kp BSPC        &kp SPACE  &kp PLUS  &kp RET &kp GRAVE &kp BSLH
       >;
     };
   };
