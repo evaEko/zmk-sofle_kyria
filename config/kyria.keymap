@@ -24,8 +24,6 @@
   &kp LCTRL &lt RSE Z &lt LWR X &kp C &kp V &kp B &kp LSHFT &kp LSHFT                      &kp PLUS &kp EQL &kp N &kp M  &kp COMMA &lt LWR DOT &lt RSE SQT &kp RCTRL
                       &kp ESC &kp LALT &kp TAB &kp DEL &kp BSPC        &kp SPACE  &kp  PLUS  &kp ENT &kp GRAVE &kp BSLH
       >;
-
-      sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
     };
     lower_layer {
       bindings = <
