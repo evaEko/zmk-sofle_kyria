@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
 #define LWR   1
@@ -21,8 +20,8 @@
       bindings = <
   &kp FSLH  &kp Q       &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp MINUS
   &kp LSHFT &kp A       &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RSHFT
-  &kp LCTRL &lt RSE Z &lt LWR X &kp C &kp V &kp B &kp LSHFT &kp LSHFT                      &kp PLUS &kp EQL &kp N &kp M  &kp COMMA &lt LWR DOT &lt RSE SQT &kp RCTRL
-                      &kp ESC &kp LALT &kp TAB &kp DEL &kp BSPC        &kp SPACE  &kp  SPACE  &kp RET &kp GRAVE &kp BSLH
+  &kp LCTRL &lt RSE Z &lt LWR X &kp C &kp V &kp B &tog LWR &tog RSE                      &kp PLUS &kp EQL &kp N &kp M  &kp COMMA &lt LWR DOT &lt RSE SQT &kp RCTRL
+                      &kp ESC &kp LALT &kp TAB &kp BSPC &kp DEL     &kp SPACE  &kp SPACE  &kp RET &kp GRAVE &kp BSLH
       >;
 
       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
