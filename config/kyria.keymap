@@ -11,9 +11,10 @@
 #define DEFAULT 0
 #define LWR   1
 #define RSE   2
+
 / {
     macros {
-        zed_em_kay: open clipboard in browser {
+        zed_em_kay: open-clipboard-in-browser {
             label = "clp_in_browser";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
