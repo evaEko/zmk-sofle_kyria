@@ -13,21 +13,27 @@
 #define RSE   2
 
 / {
-    macros {
-        zed_em_kay: zed_em_kay {
-            label = "ZM_zed_em_kay";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp Z &kp M &kp K>
-                , <&macro_release &kp LSHFT>
-                ;
-        };
+  macros {
+    copy_to_browser: copy_to_browser {
+      compatible = "zmk,behavior-macro";
+      label = "ZM_zed_em_kay";
+      #binding-cells = <0>;
+      bindings =
+        <&macro_press>,
+        <&kp LC(C)>,
+        <&macro_release>,
+        <&macro_press>,
+        <&kp LC(LA(F))>,
+        <&macro_release>,
+        <&macro_wait_time 1>,
+        <&macro_press>,
+        <&kp LC(D)>,
+        <&macro_release>,
+        <&macro_press>,
+        <&kp LC(V)>,
+        <&macro_release>;
     };
-};
-
-/  {
+  };
   keymap {
     compatible = "zmk,keymap";
 
