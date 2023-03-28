@@ -16,7 +16,7 @@
   macros {
     copy_to_browser: copy_to_browser {
       compatible = "zmk,behavior-macro";
-      label = "ZM_zed_em_kay";
+      label = "copy_to_browser";
       #binding-cells = <0>;
       bindings =
         <&macro_press>,
@@ -44,7 +44,6 @@
   &kp LCTRL &lt RSE Z   &lt LWR X &kp C &kp V &kp B &tog LWR &tog RSE                      &kp PLUS &kp EQL &kp N &kp M  &kp COMMA &lt LWR DOT &lt RSE SQT &kp RCTRL
                       &kp ESC &kp LALT &kp TAB &kp BSPC &kp DEL     &copy_to_browser  &kp SPACE  &kp RET &kp GRAVE &kp BSLH
       >;
-      bindings = <&zed_em_kay>;
       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
     };
     lower_layer {
