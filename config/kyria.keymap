@@ -12,7 +12,7 @@
 #define LWR   1
 #define RSE   2
 
-/ / {
+/ {
     macros {
         zed_em_kay: zed_em_kay {
             label = "ZM_zed_em_kay";
