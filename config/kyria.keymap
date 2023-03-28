@@ -12,7 +12,22 @@
 #define LWR   1
 #define RSE   2
 
-/ {
+/ / {
+    macros {
+        zed_em_kay: zed_em_kay {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Z &kp M &kp K>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+    };
+};
+
+  {
   keymap {
     compatible = "zmk,keymap";
 
@@ -23,7 +38,7 @@
   &kp LCTRL &lt RSE Z   &lt LWR X &kp C &kp V &kp B &tog LWR &tog RSE                      &kp PLUS &kp EQL &kp N &kp M  &kp COMMA &lt LWR DOT &lt RSE SQT &kp RCTRL
                       &kp ESC &kp LALT &kp TAB &kp BSPC &kp DEL     &kp SPACE  &kp SPACE  &kp RET &kp GRAVE &kp BSLH
       >;
-
+      bindings = <&zed_em_kay>;
       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
     };
     lower_layer {
