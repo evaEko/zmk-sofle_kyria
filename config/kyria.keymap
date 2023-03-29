@@ -22,7 +22,7 @@
         <&macro_press>,
         <&kp LC(C)>,
         <&macro_release>,
-        <&macro_wait_time 1000>
+        <&macro_wait_time 1000>,
         <&macro_press>,
         <&kp LC(LA(F))>,
         <&macro_release>,
