@@ -17,7 +17,6 @@
     copy_to_browser: copy_to_browser {
       compatible = "zmk,behavior-macro";
       label = "copy_to_browser";
-      #binding-cells = <0>;
       bindings =
         <&macro_press &kp LCTRL &kp LALT>,
         <&macro_tap &kp F>
