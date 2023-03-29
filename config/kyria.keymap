@@ -21,7 +21,7 @@
       bindings =
         <&macro_press>,
         <&kp LC(LA(F))>,
-        <&macro_release>,
+        <&macro_release>;
     };
   };
   keymap {
