@@ -19,7 +19,7 @@
       label = "copy_to_browser";
       bindings =
         <&macro_press &kp LCTRL &kp LALT>,
-        <&macro_tap &kp F>
+        <&macro_tap &kp F>,
         <&macro_release &kp LCTRL &kp LALT>,
         <&macro_wait_time 500>,
         <&macro_press &kp LCTRL>,
