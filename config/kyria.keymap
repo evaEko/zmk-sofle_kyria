@@ -23,7 +23,7 @@
         <&macro_release &kp LCTRL &kp LALT>,
         <&macro_wait_time 500>,
         <&macro_press &kp LCTRL>,
-        <&macro_tap &kp L>
+        <&macro_tap &kp L>,
         <&macro_release &kp LCTRL>;
     };
   };
