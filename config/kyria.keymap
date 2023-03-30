@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
 #define LWR   1
@@ -17,6 +16,7 @@
     copy_to_browser: copy_to_browser {
       compatible = "zmk,behavior-macro";
       label = "copy_to_browser";
+      #binding-cells = <0>;
       bindings =
         <&macro_press &kp LCTRL &kp LALT>,
         <&macro_tap &kp F>,
