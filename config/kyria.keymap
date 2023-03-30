@@ -19,12 +19,18 @@
       #binding-cells = <0>;
       bindings =
         <&macro_press &kp LCTRL &kp LALT>,
-        <&macro_tap &kp F>,
+             <&macro_tap &kp F>,
         <&macro_release &kp LCTRL &kp LALT>,
         <&macro_wait_time 500>,
         <&macro_press &kp LCTRL>,
-        <&macro_tap &kp L>,
-        <&macro_release &kp LCTRL>;
+             <&macro_tap &kp L>,
+        <&macro_release &kp LCTRL>,
+        <&macro_wait_time 500>,
+        <&macro_press &kp LCTRL &kp LALT>,
+              <&macro_tap &kp V>,
+        <&macro_release &kp LCTRL &kp LALT>,
+        <&macro_wait_time 500>,
+        <&macro_tap &kp RET>;
     };
   };
   keymap {
