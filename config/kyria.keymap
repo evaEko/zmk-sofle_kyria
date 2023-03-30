@@ -19,9 +19,13 @@
       label = "copy_to_browser";
       #binding-cells = <0>;
       bindings =
-        <&macro_press>,
-        <&kp LC(LA(F))>,
-        <&macro_release>;
+        <&macro_press &kp LCTRL &kp LALT>,
+        <&macro_tap &kp F>
+        <&macro_release &kp LCTRL &kp LALT>,
+        <&macro_wait_time 500>,
+        <&macro_press &kp LCTRL>,
+        <&macro_tap &kp L>
+        <&macro_release &kp LCTRL>;
     };
   };
   keymap {
