@@ -12,36 +12,92 @@
 #define RSE   2
 
 / {
-  macros {
-    copy_to_browser: copy_to_browser {
-      compatible = "zmk,behavior-macro";
-      label = "copy_to_browser";
-      #binding-cells = <0>;
-      bindings =
-        <&macro_press &kp LCTRL &kp LALT>,
-             <&macro_tap &kp F>,
-        <&macro_release &kp LCTRL &kp LALT>,
-        <&macro_wait_time 500>,
-        <&macro_press &kp LCTRL>,
-             <&macro_tap &kp L>,
-        <&macro_release &kp LCTRL>,
-        <&macro_wait_time 500>,
-        <&macro_press &kp LCTRL &kp LALT>,
-              <&macro_tap &kp V>,
-        <&macro_release &kp LCTRL &kp LALT>,
-        <&macro_wait_time 500>,
-        <&macro_tap &kp RET>;
+        open_home: open_home {
+            label = "Open_home";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp D>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        open_browser: open_browser {
+            label = "Open_browser";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp F>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        open_terminal: open_terminal {
+            label = "Open_terminal";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp T>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        close_window: close_window {
+            label = "Close_window";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp F4>
+                , <&macro_release &kp LALT>
+                ;
+        };
+    }; 
+    behaviors {
+        eql_close: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_3";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp EQL>, <&close_window>;
+        };
+        f_firefox: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_2";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp F>, <&open_browser>;
+        };
+        alt_or_terminal: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_1";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp LALT>, <&open_terminal>;
+        };
+        esc_home: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp ESC>, <&open_home>;
+        };
     };
-  };
   keymap {
     compatible = "zmk,keymap";
 
     default_layer {
       bindings = <
   &kp FSLH  &kp Q       &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp MINUS
-  &kp LSHFT &kp A       &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RSHFT
+  &kp LSHFT &kp A       &kp S &kp D &f_firefox &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RSHFT
   &kp LCTRL &lt RSE Z   &lt LWR X &kp C &kp V &kp B &tog LWR &tog RSE                      &copy_to_browser &kp EQL &kp N &kp M  &kp COMMA &lt LWR DOT &lt RSE SQT &kp RCTRL
-                      &kp ESC &kp LALT &kp TAB &kp BSPC &kp DEL                    &kp EQL &kp SPACE  &kp RET &kp GRAVE &kp BSLH
+                      &esc_home &alt_or_terminal &kp TAB &kp BSPC &kp DEL                    &eql_close &kp SPACE  &kp RET &kp GRAVE &kp BSLH
       >;
       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
     };
